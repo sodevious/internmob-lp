@@ -1,7 +1,3 @@
-require 'susy'
-# Require any additional compass plugins here.
-
-
 # Set this to the root of your project when deployed:
 css_dir = "assets/stylesheets"
 sass_dir = "assets/sass"

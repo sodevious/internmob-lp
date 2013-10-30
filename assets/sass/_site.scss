@@ -1,352 +1,201 @@
 // Basics
+html {
+  background: url(/assets/images/internmob-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 body {
-	-webkit-text-size-adjust: 100%;
-  font: 15px/21px $sans-font, "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: $vanilla;
-	color: $slate;
+  -webkit-text-size-adjust: 100%;
+  font: 16px $sans-font;
+  color: $offWhite;
+  text-align: center;
 }
-
-header {
-  padding: $gutter 0 $gutter/2+5 0;
-  border-bottom: 4px solid lighten($plum, 5%);
-  background: $purple;
-
-  h1 {
-    @include span-columns(12);
-    @include at-breakpoint($mobile) { @include span-columns(7, 12); font-size: 2.5em; }   
-    @include at-breakpoint($narrow-tablet) { @include span-columns(4, 12); }   
-
-    padding: 0;
-    font-family: $sans-font;
-    font-weight: 400;
-    font-size: 2em;
-    line-height: 0.80em;
-    text-transform: uppercase;
-    text-shadow: 0px 2px 0px darken($purple, 10%);
-    a { 
-      color: mix($offWhite, $purple, 80%);
-      &:hover { color: mix($offWhite, $purple, 60%); }
-    }
-  }
-
-  .tagline {
-    display: block;
-    font-family: $serif-font;
-    font-size: 0.4em;
-    font-weight: 100;
-    margin-top: $gutter/3;
-    line-height: 1em;
-    text-transform: lowercase;
-    text-shadow: 0px 1px 0px darken($purple, 10%);
-    color: lighten($plum, 20%);
-  }
-
-  .avatar {
-    @include span-columns(4,12);
-    height: 80px;
-    text-align: center;
-
-    img {
-      width: 7.5em;
-      position: relative;
-      top: -$gutter/2;
-    }
-  }
-  // Responsive
-  .avatar, nav .span { display: none; 
-    @include at-breakpoint($wide-tablet)  { display: inline-block; } 
-  }
+html, body { height: 100%; }
+i, cite, em, var, address, dfn { font-style: italic; }
+strong, b { font-weight: 700; }
+p { color: $offWhite; }
+.container {
+  max-width: $container;
+  width: 95%;
+  margin: 0px auto;
 }
+.clearfix { @include clearfix; }
 
-nav[role="navigation"] {
-    @include span-columns(12);
-    @include at-breakpoint($mobile) {
-    @include span-columns(4 omega, 12); 
-      ul { 
-        float: right; text-align: right;
-        li { margin-left: $gutter; line-height: 2.3em; } 
-        a { margin-left: 5px; } 
-      }
-    }
-
-  margin-top: $gutter/2;
-  ul { margin: 0; }
-  li {
+// Typography
+h2 {
+  font-family: $primary-font;
+  text-transform: uppercase;
+  font-size: 3.3em;
+  font-weight: 700;
+  color: $teal;
+  margin: $gutter*3 0 $gutter*2 0;
+  line-height: 1em;
+  span {
     display: block;
-    font-size:  0.85em;
-    font-family: $serif-font;
-    line-height: 1.5em;
-    text-align: left;
-    text-transform: uppercase;
-    color: lighten($plum, 10%);
-  }
-  a {
+    color: $white;
     font-size: 1.3em;
-    text-decoration: none;
-    text-transform: capitalize;
-    color: $vanilla;
-    &:hover { color: darken($vanilla, 10%); }
-  }
-  span { display: none; }
-  @include at-breakpoint($wide-tablet) { span { display: inline; } }
-}
-
-section[role="intro"] {
-  h2 {
-    margin: $gutter/2 0;
-    font-size: 2em;
-    font-family: $serif-font;
-    line-height: 1.25em;
-    text-transform: none;
-    color: mix($offBlack, $plum, 40%);
-
-    em { color: $slate; }
   }
 }
-
-section[role="hire-me"] {
-  font-family: $serif-font;
-
-  .social-links {
-    @include span-columns(12);
-    @include at-breakpoint($narrow-tablet) { @include span-columns(7, 12); } 
-    margin-bottom: $gutter;
-    padding: 0px;
-
-    li {
-      @include span-columns(6);
-      margin-bottom: $gutter*1.1;
-      font-size: 1.6em;
-      line-height: 1em;
-      &:nth-child(2n) { margin-right: 0; }
-      &:nth-child(n+5) { margin-bottom: 0; }
-    }
-    a {
-      font-family: $sans-font;
-      text-decoration: none;
-      color: $plum;
-      &:hover {
-        color: mix($offBlack, $plum, 40%);
-        @include transition(all .25s ease-in);
-      }
-    }
-    i {
-      margin-right: 2px;
-      font-size: 18px;
-      color: lighten($plum, 10%);
-    }
-    span {
-      width: 90%;
-      display: block;
-      overflow: hidden;
-      font-size: 0.55em;
-      font-family: $serif-font;
-      text-shadow: 0px -1px 0px white;
-      color: darken($teal, 10%);
-      &:hover {
-        color: mix($offBlack, $plum, 40%);
-        @include transition(all .25s ease-in);
-      }
-    }
-  }
-
-  .looking-for {
-    @include span-columns(12);
-    @include at-breakpoint($narrow-tablet)  { @include span-columns(5 omega, 12); } 
-
-    p {
-      margin-bottom: $gutter/2;
-      font-size: 1.2em;
-      line-height: 1.4em;
-      text-align: center;
-      color: $slate;
-    }
-    .highlight {
-      font-size: 1.25em;
-      color: mix($offBlack, $slate);
-    }
-    a {
-      display: block;
-      padding: $gutter/3;
-      font-size: 1.2em;  //em
-      font-family: $sans-font;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
-      text-shadow: 0px -1px 0px lighten($teal, 10%);
-      box-shadow: 0px 3px 0px  darken($teal, 10%);
-      border: 3px solid transparent; // Safari border fix
-      background: $teal;
-      color: $purple;
-      @include border-radius(5px);
-      &:hover {
-        position: relative;
-        top: 2px;
-        text-shadow: 0px -1px 0px lighten($purple, 25%);
-        box-shadow: 0px 3px 0px lighten($purple, 10%);
-        background: lighten($purple, 18%);
-      }
-    }
-  }
-
-
-    // Responsive
-  .avatar img, .tagline, nav .span { display: none; 
-    @include at-breakpoint($wide-tablet)  { display: inline-block; } 
-  }
+h3 {
+  font-weight: 600;
+  font-size: 1.81em;
+  margin-bottom: $gutter*2;
+}
+p.intro {
+  font-size: 1.7em;
+  font-weight: 300;
+  width: 90%;
+  margin: 0px auto;
+  color: lighten($gray, 5%);
+  line-height: 1.1em;
+  margin-bottom: $gutter;
 }
 
-@import "portfolio";
 
-section[role="blog"] {
-  article, aside {
-    @include span-columns(12);
-    @include at-breakpoint($narrow-tablet) { @include span-columns(10,12); @include pre(1); } 
-  }
-  
-  h3 {
-    margin-bottom: $gutter/2.5;
-    font-family: $sans-font;
-    font-weight: 700;
-    font-size: 1.6em;
-    word-spacing: 1px;
-
-    a { color: lighten($plum, 5%); }
-  }
-
-  p {
-    margin: $gutter/1.5 0;
-    font-family: $serif-font;
-    font-size: 1.1em;
-    line-height: 1.6em;
-    color: $slate;
-    &:last-child { margin: 0; }
-
-    a {
-      border-bottom: 1px dotted rgba(0,0,0,0.2);
-      &:hover { border: 0px; }
-    }
-
-    img {
-      margin: $gutter/2 0 $gutter/3 0;
-      @include styled-image;
-    }
-  }
-
-  a {
-    color: darken($teal, 20%);
-    &:hover { color: darken($teal, 10%); }
-  }
-
-  .meta {
-    margin: $gutter/3 0 $gutter 0;
-    font-family: $sans-font;
-    font-size: 0.9em;
-    color: $plum;
-
-    a {
-      margin: 0;
-      padding-right: 5px;
-      font-size: 1.2em;
-      font-weight: 100;
-      line-height: 1px;
-      vertical-align: baseline;
-      color: lighten($plum, 20%);
-    }
-
-    i {
-      margin-left: 5px;
-      font-size: 0.8em;
-    }
-  }
-  .single {
-    margin-bottom: $gutter;
-
-    h3 {
-      font-size: 1.8em;
-      line-height: 1em;
-    }
-
-    ul {
-      margin-left: $gutter;
-
-      li {
-        margin: $gutter/3 0;
-        font-size: 0.9em;
-        list-style-type: disc;
-      }
-    }
-  }
-  aside {
-    a {
-      padding: 6px;
-      font-size: 0.85em;
-      text-transform: uppercase;
-
-      background: rgba(255,255,255,0.8);
-      color: lighten($plum, 15%);
-      @include border-radius(3px);
-    }
-
-    li {
-      @include span-columns(12);
-      @include at-breakpoint($narrow-tablet) { @include span-columns(4,12); margin-bottom: 0; } 
-      margin-top: $gutter/2;
-      text-align: center;
-      word-spacing: 2px;
-      &:last-child { @include omega; }
-    }
-  }
-
-}
-
-section[role="projects"] {
-  .side-project {
-    @include span-columns(12);
-    @include at-breakpoint($narrow-tablet) { @include mini-half-col; margin-bottom: 0; } 
-    margin-bottom: $gutter;
-    &:last-child { @include omega; }
-
-    h3 {
-      margin-bottom: $gutter/3;
-      font-size: 1.3em;
-
-      a {
-        margin-left: $gutter/5;
-        font-size: 0.8em;
-        color: mix($haze, $teal, 35%);
-        &:hover { color: darken($teal, 10%); }
-      }
-    }
-
-    p {
-      font-size: 1.05em;
-      font-family: $serif-font;
-      line-height: 1.5em;
-      color: $slate;
-    }
-  }
-}
-
-footer {
-  padding: $gutter/2 0 $gutter/2 0;
-  font-family: $serif-font;
-  border-top: 4px solid lighten($plum, 5%);
-  background: $purple;
-
-  p {
-    font-size: 0.8em;
-    color: lighten($plum, 10%);
-    @include span-columns(6);
-    &:last-child { @include omega; text-align: right; }
-  }
-
-  a {
-    margin-left: $gutter/3;
-    font-size: 0.9em;
+.email-signup {
+  legend {
+    font-family: $primary-font;
+    color: $gray;
     text-transform: uppercase;
-    color: mix($plum, $haze);
-    &:hover { color: mix($plum, $haze, 20%); }
+    font-style: italic;
+    margin: 0px auto;
+    line-height: 1.6em;
+    font-size: 1.2em;
+    text-align: center;
+    display: block;
+  }
+
+  input:focus[type=text], input[type=email]:focus {
+    outline: none;
+    border: 1px solid $gray;
+  }
+  input:focus[type=submit] {
+    outline: none;
+  }
+
+  input[type=text], input[type=email] {
+    border: 1px solid white;
+    color: lighten($gray, 30%);
+    font-family: $secondary-font;
+    font-weight: 100;
+    font-size: 1em;
+    padding: $gutter/2;
+    width: 12.5em;
+    -webkit-appearance: textfield;
+    @include border-radius(5px);
+  }
+  input[type=submit] {
+    border: 0px;
+    background: $lightBlue;
+    color: $white;
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    padding: 9px 0;
+    width: 9em;
+    @include box-shadow( 0px -3px 0px darken($lightBlue, 15%) inset);
+    @include border-radius(5px);
+  }
+
+  .mc-field-group {
+    margin: 0 0.3em;
+    width: 14em;
+    float: left;
+    display: inline-block;
+    label {
+      font-size: 0.75em;
+      color: darken($gray, 15%);
+    }
+  }
+}
+
+
+// Links
+a { text-decoration: none; }
+a:hover { @include transition(all .15s ease-in); }
+
+.accordion {
+  padding: $gutter/2;
+  margin: $gutter*2 0;
+  background: $teal;
+
+  background-image: -o-linear-gradient(-90deg, rgba(255,255,255,0.13) 0%, rgba(0,0,0,0.09) 100%);
+  background-image: -moz-linear-gradient(-90deg, rgba(255,255,255,0.13) 0%, rgba(0,0,0,0.09) 100%);
+  background-image: -webkit-linear-gradient(-90deg, rgba(255,255,255,0.13) 0%, rgba(0,0,0,0.09) 100%);
+  background-image: -ms-linear-gradient(-90deg, rgba(255,255,255,0.13) 0%, rgba(0,0,0,0.09) 100%);
+  background-image: linear-gradient(-180deg, rgba(255,255,255,0.13) 0%, rgba(0,0,0,0.09) 100%);
+
+  @include border-radius(5px);
+  @include box-shadow(inset 0px 1px 2px 0px rgba(255,255,255,0.50));
+
+  p {
+    display: none;
+    text-align: left;
+    padding: 1em;
+    margin-top: $gutter/2;
+  }
+  h4 {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.50);
+  }
+  .email-signup {
+    display: none;
+    height: 90px;
+    font-size: 15.5px;
+    margin-top: $gutter;
+    legend {
+      font-size: 1em;
+      color: mix(white, $teal);
+    }
+    label { color: mix(white, $teal); }
+    input[type=submit] {
+      background: lighten($gray, 25%);
+      color: darken($gray, 5%);
+      @include box-shadow( 0px -3px 0px lighten($gray, 13%) inset);
+    }
+  }
+}
+
+footer p {
+  color: darken($gray, 20%);
+  padding: $gutter/2;
+  font-size: 0.8em;
+}
+
+
+@media screen and (max-width:$container) {
+  h2 {
+    font-size: 1.8em;
+    margin: $gutter*2 0 $gutter*2 0;
+    span { font-size: 1.2em; }
+  }
+
+  .email-signup {
+  input[type=text], input[type=email] {
+      width: 100%;
+                margin: 0px auto;
+
+      display: block;
+    }
+legend {
+  font-size: 1em;
+  width: 70%;
+  line-height: 1em;
+  margin-bottom: $gutter/2;
+}
+    .mc-field-group {
+          margin: 0px auto;
+
+          float: none;
+
+    }
+  }
+  .accordion   .email-signup {
+    height: auto;
   }
 }

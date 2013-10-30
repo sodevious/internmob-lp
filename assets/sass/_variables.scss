@@ -1,17 +1,22 @@
 $offWhite: #e6e6e6;
 $offBlack: #333333;
 
-$vanilla: #f7f6e4;
-$purple: #2f2b3f;
-$teal: #79b7b0;
-$plum: #635063;
-$haze: #C1D2CF;
-$pink: #FA9887;
-
-$lightPlum: mix($plum, $vanilla, 25%);
-$slate: mix($vanilla, $offBlack, 28%);
+$teal: #469D9D;
+$lightBlue: #65A9A8;
+$white: #F6F6F6;
+$gray: #8F8F8F;
 
 $gutter: 25px;
+$container: 680px;
 
-$serif-font: "Adelle", Georgia, serif;
-$sans-font: "Effra", "Helvetica Neue", sans-serif;
+
+$primary-font: "Museo Sans", "Helvetica Neue", sans-serif;
+$secondary-font: "Source Sans Pro", "Helvetica Neue", sans-serif;
+
+$serif-font: $primary-font;
+$sans-font: $secondary-font;
+
+
+
+
+
