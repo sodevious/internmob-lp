@@ -1,6 +1,6 @@
 // Basics
 html {
-  background: url(assets/images/internmob-bg.jpg) no-repeat center center fixed; 
+  background: url(/internmob-lp/assets/images/internmob-bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -135,6 +135,7 @@ a:hover { @include transition(all .15s ease-in); }
     display: none;
     text-align: left;
     padding: 1em;
+
     margin-top: $gutter/2;
   }
   h4 {

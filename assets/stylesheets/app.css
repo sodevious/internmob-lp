@@ -66,7 +66,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 2, ../sass/_site.scss */
 html {
-  background: url(assets/images/internmob-bg.jpg) no-repeat center center fixed;
+  background: url(/internmob-lp/assets/images/internmob-bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -258,30 +258,30 @@ a:hover {
   padding: 1em;
   margin-top: 12.5px;
 }
-/* line 140, ../sass/_site.scss */
+/* line 141, ../sass/_site.scss */
 .accordion h4 {
   font-weight: 600;
   cursor: pointer;
   font-size: 1.2em;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
-/* line 146, ../sass/_site.scss */
+/* line 147, ../sass/_site.scss */
 .accordion .email-signup {
   display: none;
   height: 90px;
   font-size: 15.5px;
   margin-top: 25px;
 }
-/* line 151, ../sass/_site.scss */
+/* line 152, ../sass/_site.scss */
 .accordion .email-signup legend {
   font-size: 1em;
   color: #a2cece;
 }
-/* line 155, ../sass/_site.scss */
+/* line 156, ../sass/_site.scss */
 .accordion .email-signup label {
   color: #a2cece;
 }
-/* line 156, ../sass/_site.scss */
+/* line 157, ../sass/_site.scss */
 .accordion .email-signup input[type=submit] {
   background: #cfcfcf;
   color: #828282;
@@ -290,7 +290,7 @@ a:hover {
   box-shadow: 0px -3px 0px #b0b0b0 inset;
 }
 
-/* line 164, ../sass/_site.scss */
+/* line 165, ../sass/_site.scss */
 footer p {
   color: #5c5c5c;
   padding: 12.5px;
@@ -298,36 +298,36 @@ footer p {
 }
 
 @media screen and (max-width: 680px) {
-  /* line 172, ../sass/_site.scss */
+  /* line 173, ../sass/_site.scss */
   h2 {
     font-size: 1.8em;
     margin: 50px 0 50px 0;
   }
-  /* line 175, ../sass/_site.scss */
+  /* line 176, ../sass/_site.scss */
   h2 span {
     font-size: 1.2em;
   }
 
-  /* line 179, ../sass/_site.scss */
+  /* line 180, ../sass/_site.scss */
   .email-signup input[type=text], .email-signup input[type=email] {
     width: 100%;
     margin: 0px auto;
     display: block;
   }
-  /* line 185, ../sass/_site.scss */
+  /* line 186, ../sass/_site.scss */
   .email-signup legend {
     font-size: 1em;
     width: 70%;
     line-height: 1em;
     margin-bottom: 12.5px;
   }
-  /* line 191, ../sass/_site.scss */
+  /* line 192, ../sass/_site.scss */
   .email-signup .mc-field-group {
     margin: 0px auto;
     float: none;
   }
 
-  /* line 198, ../sass/_site.scss */
+  /* line 199, ../sass/_site.scss */
   .accordion .email-signup {
     height: auto;
   }
