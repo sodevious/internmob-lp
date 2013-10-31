@@ -77,9 +77,9 @@ p.intro {
 
   input[type=text], input[type=email] {
     border: 1px solid white;
-    color: lighten($gray, 30%);
+    color: darken($gray, 20%);
     font-family: $secondary-font;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1em;
     padding: $gutter/2;
     width: 12.5em;

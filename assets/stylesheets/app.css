@@ -173,9 +173,9 @@ p.intro {
 /* line 78, ../sass/_site.scss */
 .email-signup input[type=text], .email-signup input[type=email] {
   border: 1px solid white;
-  color: gainsboro;
+  color: #5c5c5c;
   font-family: "source-sans-pro", "Source Sans Pro", "Helvetica Neue", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1em;
   padding: 12.5px;
   width: 12.5em;
