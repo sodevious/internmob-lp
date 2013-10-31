@@ -66,7 +66,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 2, ../sass/_site.scss */
 html {
-  background: url(/assets/images/internmob-bg.jpg) no-repeat center center fixed;
+  background: url(/assets/images/internmob-bg.jpg) no-repeat center center fixed #333333;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -76,7 +76,7 @@ html {
 /* line 9, ../sass/_site.scss */
 body {
   -webkit-text-size-adjust: 100%;
-  font: 16px "tk-source-sans-pro", "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font: 16px "source-sans-pro", "Source Sans Pro", "Helvetica Neue", sans-serif;
   color: #e6e6e6;
   text-align: center;
 }
@@ -116,7 +116,7 @@ p {
 
 /* line 27, ../sass/_site.scss */
 h2 {
-  font-family: "tk-museo-sans", "Museo Sans", "Helvetica Neue", sans-serif;
+  font-family: "museo-sans", "Museo Sans", "Helvetica Neue", sans-serif;
   text-transform: uppercase;
   font-size: 3.3em;
   font-weight: 700;
@@ -151,7 +151,7 @@ p.intro {
 
 /* line 58, ../sass/_site.scss */
 .email-signup legend {
-  font-family: "tk-museo-sans", "Museo Sans", "Helvetica Neue", sans-serif;
+  font-family: "museo-sans", "Museo Sans", "Helvetica Neue", sans-serif;
   color: #8f8f8f;
   text-transform: uppercase;
   font-style: italic;
@@ -174,7 +174,7 @@ p.intro {
 .email-signup input[type=text], .email-signup input[type=email] {
   border: 1px solid white;
   color: gainsboro;
-  font-family: "tk-source-sans-pro", "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-family: "source-sans-pro", "Source Sans Pro", "Helvetica Neue", sans-serif;
   font-weight: 100;
   font-size: 1em;
   padding: 12.5px;
@@ -191,7 +191,7 @@ p.intro {
   border: 0px;
   background: #65a9a8;
   color: #f6f6f6;
-  font-family: "tk-source-sans-pro", "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-family: "source-sans-pro", "Source Sans Pro", "Helvetica Neue", sans-serif;
   font-weight: 700;
   font-size: 1.4em;
   text-transform: uppercase;
